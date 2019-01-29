@@ -35,9 +35,26 @@ class ViewController: UIViewController {
         self.tf.layer.borderColor = UIColor.gray.cgColor // 테두리 색상 - 회색
         self.tf.layer.borderWidth = 2.0 // 테두리 두께 - 2.0픽셀
         
+        // 텍스트 필드를 최초 응답자로 지정
+        self.tf.becomeFirstResponder()
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
+    // 입력 버튼 이벤트
+    @IBAction func input(_ sender: Any) {
+        
+        // 텍스트 필드를 최초 응답자 객체로 지정
+        self.tf.becomeFirstResponder()
+    }
+    
+    // 확인 버튼 이벤트
+    @IBAction func confirm(_ sender: Any) {
+        
+        // 텍스트 필드를 최초 응답자 객체에서 해제
+        self.tf.resignFirstResponder()
+    }
+    
 }
 
